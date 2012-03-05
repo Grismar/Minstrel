@@ -1,0 +1,40 @@
+Minstrel 0.01
+
+Who:
+By Grismar @ http://grismar.net
+
+What:
+A media library and frontend for VLC Player.
+
+What's New:
+* Everything
+
+Requirements:
+* Java
+* Knowing what you're doing
+
+Installation:
+* <forthcoming>
+
+Getting started:
+* <forthcoming>
+
+Documentation:
+* <url forthcoming>
+
+Known problems:
+* None
+
+Version history:
+* 0.01 - first version ever
+
+Pricing information:
+* <forthcoming>
+
+Contact information:
+* grismar@grismar.net / jaapvandervelde@gmail.com / @grismar
+
+Copyright:
+* 2011, Jaap van der Velde aka Grismar
+* Contains third party components released under Apache 2.0 license:
+  - Xerial SQLite JDBC, by Xerial at http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC
