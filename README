@@ -36,5 +36,8 @@ Contact information:
 
 Copyright:
 * 2011, Jaap van der Velde aka Grismar
-* Contains third party components released under Apache 2.0 license:
+* Contains third party components released under Modified BSD license (lib/MODBSDLICENSE.txt):
+  - NanoHTTPD, Copyright © 2001,2005-2012 Jarno Elonen <elonen@iki.fi> and 
+      Copyright © 2010 Konstantinos Togias <info@ktogias.gr>
+* Contains third party components released under Apache 2.0 license (lib/LICENSE-2.0.txt):
   - Xerial SQLite JDBC, by Xerial at http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC

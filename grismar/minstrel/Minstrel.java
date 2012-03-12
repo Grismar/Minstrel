@@ -3,7 +3,7 @@ package grismar.minstrel;
 import grismar.argus.Argus;
 import grismar.common.Log;
 import grismar.minstrel.MinstrelParams;
-
+import grismar.web.GrismarHTTPD;
 import java.io.File;
 
 public class Minstrel {
@@ -25,11 +25,17 @@ public class Minstrel {
 			if (!fwwwroot.exists()) {
 				throw new Exception("Path not found (wwwroot) " + params.wwwroot);
 			}
+			
 			// Start webserver
-			MinstrelHTTPD httpd = new MinstrelHTTPD(params.port, fwwwroot);
-
+			GrismarHTTPD httpd = new GrismarHTTPD(params.port, fwwwroot);
+			
 			Log.message( "Listening on port " + params.port + ". Hit Enter to stop.\n" );
-			try { System.in.read(); } catch( Throwable t ) {};
+
+			MinstrelHandler handler = new MinstrelHandler(httpd);
+			MinstrelLock lock = new MinstrelLock(httpd);
+			
+			// TODO replace simple wait with more graceful exit
+			// try { System.in.read(); } catch( Throwable t ) {};
 			Log.message( "Terminated OK.\n" );
 
 		} catch (ClassNotFoundException e) {
@@ -38,5 +44,4 @@ public class Minstrel {
 			Log.error("Exception occurred: " + e.getMessage());
 		}
 	}
-
 }
