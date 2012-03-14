@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 /**
- * Embedded webserver based on NanoHTTPD, Copyright © 2001,2005-2012 Jarno Elonen <elonen@iki.fi> 
- * and Copyright © 2010 Konstantinos Togias <info@ktogias.gr> - see license.
+ * Embedded webserver based on {@link NanoHTTPD}. Provides hook functionality, allowing objects implementing the
+ * {@link RequestListener} interface to listen for requests starting with a double slash (//) after the domain.
  * @author Grismar
  * @version Minstrel 0.01
  */

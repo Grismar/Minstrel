@@ -10,8 +10,6 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import grismar.common.Log;
-
 public class MinstrelParams {
 	// params with their defaults
 	public int port = 8000;
@@ -61,7 +59,7 @@ public class MinstrelParams {
 				try {
 					port = Integer.parseInt( line.getOptionValue("port"));
 				} catch (NumberFormatException e) {
-					Log.error("Badly formatted port number, defaulting to 8000. Reason: " + e.getMessage());
+					System.err.println("Badly formatted port number, defaulting to 8000. Reason: " + e.getMessage());
 					port = 8000;
 				}
 			}
@@ -75,7 +73,7 @@ public class MinstrelParams {
 				wwwroot = line.getOptionValue("wwwroot");
 			}
 		} catch (ParseException e) {
-			Log.error("Command line parsing failed. Reason: " + e.getMessage());
+			System.err.println("Command line parsing failed. Reason: " + e.getMessage());
 		}
 	}
 }
